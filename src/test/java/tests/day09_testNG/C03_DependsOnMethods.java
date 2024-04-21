@@ -16,6 +16,27 @@ import java.time.Duration;
 
 public class C03_DependsOnMethods {
 
+    /*
+        Eger bir test method'un calismasi icin onceden farkli bir test method'un calismasi gerekiyorsa
+        dependsOnMethods kullanabiliriz
+
+        dependsOnMethods bir SIRALAMA yontemi degildir
+        siralama icin priority kullanilir
+
+        - calistirmak istedigimiz B method'unda, dependsOnMethod = "A" yazili ise
+          A test method'u calisip PASSED olmadikca
+          B test method'u IGNORE edilir ve calistirilmaz
+
+        - Eger calistirilma sirasi B'ye geldiyse
+          B method'u onceligi A'ya verir
+          ve once A calisir, A calisip PASSED olursa B calistirilir
+
+        - Biz sadece B method'unu calistirmak istesek de
+          dependsOnMethod ozelliginden dolayi
+          TestNG once A method'unu calistirir, sonra B'yi calistirir
+          Ancak bu ozellik 2'den fazla method icin calismaz
+     */
+
     // Test otomasyonu sayfasina gidip
     // asagidaki 3 testi farkli test method'larinda calistirin
     // 1- testotomasyonu sayfasina gittigimizi test edin
@@ -51,7 +72,7 @@ public class C03_DependsOnMethods {
         ReusableMethods.bekle(2);
     }
 
-    @Test(priority = 1)
+    @Test(dependsOnMethods = "anasayfaTesti")
     public void phoneAramaTesti(){
 
         // 2- phone icin arama yapip,
@@ -70,7 +91,7 @@ public class C03_DependsOnMethods {
         ReusableMethods.bekle(3);
     }
 
-    @Test(priority = 2)
+    @Test(dependsOnMethods = "phoneAramaTesti")
     public void ilkUrunIsimTesti(){
         // 3- ilk urunu click yapip,
         driver.findElement(By.xpath("(//*[@class='product-box my-2  py-1'])[1]"))
