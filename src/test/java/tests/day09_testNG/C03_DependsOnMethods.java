@@ -59,7 +59,6 @@ public class C03_DependsOnMethods {
         driver.quit();
     }
 
-
     @Test
     public void anasayfaTesti(){
         driver.get("https://www.testotomasyonu.com");
@@ -109,3 +108,16 @@ public class C03_DependsOnMethods {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
