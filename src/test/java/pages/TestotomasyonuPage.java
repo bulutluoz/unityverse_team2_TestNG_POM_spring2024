@@ -16,4 +16,19 @@ public class TestotomasyonuPage {
 
     @FindBy(className = "product-count-text")
     public WebElement aramaSonucYaziElementi;
+
+    @FindBy(xpath = "(//*[text()='Account'])[1]")
+    public WebElement accountLinki;
+
+    @FindBy(id ="email")
+    public WebElement emailKutusu;
+
+    @FindBy(id ="password")
+    public WebElement passwordKutusu;
+
+    @FindBy(id ="submitlogin")
+    public WebElement loginSayfasiLoginButonu;
+
+    @FindBy(xpath = "(//*[text()='Logout'])[2]")
+    public WebElement logoutButonu;
 }
