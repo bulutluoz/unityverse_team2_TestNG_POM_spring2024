@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class TestotomasyonuPage {
 
     public TestotomasyonuPage(){
@@ -31,4 +33,7 @@ public class TestotomasyonuPage {
 
     @FindBy(xpath = "(//*[text()='Logout'])[2]")
     public WebElement logoutButonu;
+
+    @FindBy(xpath = "//*[@class='product-box my-2  py-1']")
+    public List<WebElement> bulunanSonucElementleriListesi;
 }
