@@ -25,6 +25,7 @@ public class C03_DinamikPozitifLoginTesti {
         //6- Basarili olarak giris yapilabildigini test edin
         Assert.assertTrue(testotomasyonuPage.logoutButonu.isEnabled());
         //7- logout olup, sayfayi kapatin
+        ReusableMethods.bekle(1);
         testotomasyonuPage.logoutButonu.click();
         Driver.quitDriver();
 
