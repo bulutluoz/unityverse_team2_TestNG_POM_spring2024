@@ -33,6 +33,7 @@ public class C04_DinamikNegatifLoginTesti {
         //5- Basarili olarak giris yapilamadigini test edin
         Assert.assertTrue(testotomasyonuPage.emailKutusu.isEnabled());
         //6- Sayfayi kapatin
+
         Driver.quitDriver();
 
     }

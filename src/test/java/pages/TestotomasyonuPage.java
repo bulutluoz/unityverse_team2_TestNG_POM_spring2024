@@ -36,4 +36,7 @@ public class TestotomasyonuPage {
 
     @FindBy(xpath = "//*[@class='product-box my-2  py-1']")
     public List<WebElement> bulunanSonucElementleriListesi;
+
+    @FindBy(xpath = " //div[@class=' heading-sm mb-4']")
+    public WebElement ilkUrunSayfasindakiIsimElementi;
 }
