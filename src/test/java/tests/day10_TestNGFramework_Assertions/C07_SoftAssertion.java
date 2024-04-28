@@ -1,10 +1,15 @@
 package tests.day10_TestNGFramework_Assertions;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.ZeroWebAppPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.util.List;
 
 public class C07_SoftAssertion {
 
@@ -38,13 +43,42 @@ public class C07_SoftAssertion {
         softAssert.assertTrue(zeroWebAppPage.usernameDropdown.isDisplayed(),"Giris yapilamadi");
 
         // 9. Online banking menusunu tiklayin
+        zeroWebAppPage.onlineBanking.click();
         //10. Pay Bills sayfasina gidin
+        zeroWebAppPage.payBillsLinki.click();
         //11. “Purchase Foreign Currency” tusuna basin
+        zeroWebAppPage.purchaseForeignCurrency.click();
         //12. Currency dropdown menusunun erisilebilir oldugunu dogrulayin
+        softAssert.assertTrue(zeroWebAppPage.pcCurrencyDropdownElementi.isEnabled(),
+                "Pc currency dropdown menu kullanilamiyor");
         //13. “Currency” dropdown menusunden Eurozone’u secin
+
+        Select select = new Select(zeroWebAppPage.pcCurrencyDropdownElementi);
+        select.selectByValue("EUR");
         //14. "Eurozone (euro)" secildigini dogrulayin
+
+        String expectedSecilenOption = "Eurozone (euro)";
+        String actualSecilenOption = select.getFirstSelectedOption().getText();
+        softAssert.assertEquals(actualSecilenOption,expectedSecilenOption,
+                            "Currency olarak euro secilmemis");
+
         //15. Dropdown menude 16 option bulundugunu dogrulayin.
+
+        int expectedOptionSayisi = 16;
+        int actualOptionSayisi = select.getOptions().size();
+
+        softAssert.assertEquals(actualOptionSayisi,expectedOptionSayisi,
+                                    "Currency dropdown'da 16 option yok");
+
         //16. Dropdown menude "Canada (dollar)" bulunduğunu dogrulayin
+
+        List<WebElement> dropdownMenuElementleriList = select.getOptions();
+        List<String> dropdownOptionListStr = ReusableMethods.stringListeDonustur(dropdownMenuElementleriList);
+
+        String expectedOption = "Canada (dollar)";
+        softAssert.assertTrue(dropdownOptionListStr.contains(expectedOption),
+                        "dropdown menu Canada (dollar) icermiyor");
+
         //17. Sayfayi kapatin
         softAssert.assertAll();
         Driver.quitDriver();
