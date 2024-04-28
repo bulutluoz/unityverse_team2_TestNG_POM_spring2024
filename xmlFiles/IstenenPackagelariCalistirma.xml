@@ -9,7 +9,7 @@
         <test name="istenen packagei calistirma">
             
             <packages>
-                <package name="tests.day09_testNG"></package>
+                <package name="tests.day11_xmlFiles_htmlReports"></package>
             </packages>
             
         </test>
