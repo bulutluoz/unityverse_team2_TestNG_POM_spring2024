@@ -1,0 +1,62 @@
+<!--
+    Test, bir amac icin bir araya getirilmis
+          test package'lari, test class'lari veya test method'larinin tumudur.
+
+    Smoke Test : Bir uygulamanin en can alici ozelliklerinin
+                 sorunsuz olarak calistigini dogrulamak icin yapilir
+
+    Regression Test :   Uygulamanin tum ozelliklerinin sorunsuz calistigini dogrulamak icin
+                        uygulamada test icin yazilmis olan tum class'larin calistirilmasidir
+                        - buyuk bir versiyon degisikligi yapilmissa
+                          tum ozelliklerin dogru sekilde calistigindan emin olmak icin
+                        - Belirli zaman araliklariyla( ornegin 3 ay)
+                          hic bir yeni versiyon olmasa da
+                          uygulamanin tum ozelliklerinin sorunsuz calistigini
+                          dogrulamak icin regression test yapilir
+
+    End To End Testleri : Uygulamanin amacina uygun olarak
+                          yaptigi islemlerin en bastan en sona kadar sirali olarak test edilmesidir
+                          ornegin; rezervasyon yapan bir uygulama icin
+                          E2E testi bir kullanicinin
+                          - sifirdan kullanici olusturmasi
+                          - sisteme giris yapmasi
+                          - rezervasyon yapmasi
+                          - rezervasyon uzerinde degisiklik yapabilmesi
+                          - ve rezervasyon icin odeme yapabilmesini kapsayabilir
+
+    Test Hiyerarsisi, Uygulamamizin saglikli olarak calistigini dogrulamak icin
+                      test method'lari, test class'lari, test package'lari
+                      birlikte veya bagimsiz olarak calistirilabilir
+
+                      test method'lari, test class'lari, test package'lari
+                      biraraya gelerek TEST'leri
+
+                      Test'ler de bir araya gelerek TEST SUITE'lerini olustururlar
+
+      TestNG'de testleri toplu olarak calistirmak icin .xml dosyalari kullaniriz.
+      .xml dosyalari icerisinde calismasini istedigimiz
+      test method'lari, test class'lari, test package'larini
+      test hiyerarsisine uygun olarak yazmaliyiz
+
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!--
+    day09'dan  C01 ve C06
+    day10'dan C02 ve C05 class'larini toplu olarak calistirin
+-->
+
+    <suite name="istenen class'lari calistirma">
+        <test name="login testleri"> 
+
+            <classes>
+                <class name="tests.day09_testNG.C01_TestNGAramaTesti"></class>
+                <class name="tests.day09_testNG.C06_PozitifLoginTesti"></class>
+                <class name="tests.day10_TestNGFramework_Assertions.C02_DinamikTestDatasiKullanma"></class>
+                <class name="tests.day10_TestNGFramework_Assertions.C05_TestNG_Assertions"></class>
+            </classes>
+        
+        
+        </test>
+    </suite>

@@ -1,0 +1,21 @@
+
+
+<!--
+    Yuzlerce , binlerce class'dan olusan bir framework'de
+    istenen class'lari veya method'lari tek tek
+    .xml dosyasindan secmek yerine
+
+    test method'lari calistirilmak istenen testlere gore gruplanabilir
+
+    test method'lari calismasini istedigimiz testlere gore
+    bir kere etiketlendiginde
+    .xml dosyasinda artik tek tek method secmemize gerek yok
+
+    bana smoke grubundakileri calistir dememiz yeterli olacaktir
+
+    istenen gruplari calistirmada
+    - hangi spesifik grubun calismasini/calismamasini istedigimizi
+    - ve secim yapmak istedigimiz class'larin hangi package'lar aldinda bulundugunu
+    soylememiz gerekir.
+
+-->

@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class C06_PozitifLoginTesti {
 
-    @Test
+    @Test (groups = "smoke")
     public void pozitifLogintesti(){
 
         //1- https://www.testotomasyonu.com/ anasayfasina gidin

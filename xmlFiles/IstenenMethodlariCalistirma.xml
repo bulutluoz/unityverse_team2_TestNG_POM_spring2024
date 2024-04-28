@@ -1,0 +1,38 @@
+
+
+<!--
+    day09 C07'deki gecersizEmailTesti
+
+    day10 C04'deki gecersizUsernameGecersizPasswordTesti haric diger testleri
+    toplu olarak calistirin
+
+    bir class icerisindeki tum test method'lari calistirilacaksa
+    tek tek tum method'lari secmeye gerek kalmadan
+    class'i calistirabiliriz
+
+    method secimi
+    - bir class'da sadece spesifik bir method'un calismasi istendiginde
+    - bir class'da spesifik bir method disinda tum method'larin calismasi istendiginde
+    kullanilir
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="istenen methodlari calistirma">
+    <test name="negatif login testleri">
+        <classes>
+
+            <class name="tests.day09_testNG.C07_NegatifLoginTesti">
+                <methods>
+                    <include name="gecersizEmailTesti"></include>
+                </methods>
+            </class>
+
+            <class name="tests.day10_TestNGFramework_Assertions.C04_DinamikNegatifLoginTesti">
+                <methods>
+                    <exclude name="gecersizUsernameGecersizPasswordTesti"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

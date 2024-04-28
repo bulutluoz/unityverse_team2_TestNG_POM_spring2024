@@ -10,7 +10,7 @@ import utilities.ReusableMethods;
 
 public class C02_DinamikTestDatasiKullanma {
 
-    @Test
+    @Test(groups = "smoke")
     public void dinamikAramaTesti(){
 
         // testotomasyonu anasayfaya gidin
