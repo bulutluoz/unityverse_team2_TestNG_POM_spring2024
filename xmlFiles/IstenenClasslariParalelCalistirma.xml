@@ -1,0 +1,40 @@
+
+
+<!--
+
+    testlerin paralel calistirilmasi
+    veya paralel test dendiginde
+    ayni anda birden fazla browser'in calisarak
+    tum calisacak class/method'lari beraberce calisip bitirmesidir
+
+    temel olarak birden fazla browser calistigi icin
+    testlerin daha kisa surede bitmesi amaclansa da
+    cakismalar ve Webdriver objesi olusturmada ayni Driver class'i kullanildigindan
+    TestNG'de paralel calistirma cok tercih edilmez
+
+    paralel calistirma icin
+    bildigimiz sekilde bir xml dosyasi olusturup
+    sonra ayni anda calisacak browser sayisini
+    ve browser'larin gorev bolusumunu nasil yapacaklarini yazmamiz gerekir
+
+    ornegin
+    day09'dan  C01 ve C06
+    day10'dan C02 ve C05 class'larini toplu olarak
+    ayni anda 2 browser aktif olacak sekilde calistiralim
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="istenen class'lari calistirma" thread-count="2" parallel="classes">
+    <test name="login testleri">
+
+        <classes>
+            <class name="tests.day09_testNG.C01_TestNGAramaTesti"></class>
+            <class name="tests.day09_testNG.C06_PozitifLoginTesti"></class>
+            <class name="tests.day10_TestNGFramework_Assertions.C02_DinamikTestDatasiKullanma"></class>
+            <class name="tests.day10_TestNGFramework_Assertions.C05_TestNG_Assertions"></class>
+        </classes>
+
+
+    </test>
+</suite>

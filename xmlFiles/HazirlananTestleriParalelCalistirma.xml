@@ -1,0 +1,24 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Paralel test calistirma" thread-count="2" parallel="tests">
+
+    <test name="browser1">
+
+        <classes>
+            <class name="tests.day09_testNG.C01_TestNGAramaTesti"></class>
+            <class name="tests.day09_testNG.C06_PozitifLoginTesti"></class>
+        </classes>
+
+    </test>
+
+    <test name="browser2">
+
+        <classes>
+            <class name="tests.day10_TestNGFramework_Assertions.C02_DinamikTestDatasiKullanma"></class>
+            <class name="tests.day10_TestNGFramework_Assertions.C05_TestNG_Assertions"></class>
+        </classes>
+
+    </test>
+
+</suite>
