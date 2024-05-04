@@ -28,7 +28,7 @@
         <groups>
             <run>
                 <include name="smoke"></include>
-                <include name="regression"></include>
+                <exclude name="regression"></exclude>
             </run>
         </groups>
         

@@ -13,7 +13,7 @@ import java.util.List;
 
 public class C01_POM_DropdownTesti {
 
-    @Test
+    @Test (groups = {"smoke","E2E","miniRegression1"})
     public void test01(){
         //1 - https://testotomasyonu.com/form adresine gidin
         Driver.getDriver().get("https://testotomasyonu.com/form");

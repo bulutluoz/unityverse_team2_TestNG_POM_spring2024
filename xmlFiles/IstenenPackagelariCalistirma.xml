@@ -5,7 +5,7 @@
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-    <suite name="day09 toplu cal;istirma">
+    <suite name="day09 toplu calistirma">
         <test name="istenen packagei calistirma">
             
             <packages>
