@@ -5,7 +5,9 @@
     <test name="chrome ile calisacak testler">
         <parameter name="secilenCrossBrowser" value="chrome"></parameter>
 
-
+            <classes>
+                <class name="tests.day12_crossBrowserTestler.C01_CrossBrowserAramaTesti"></class>
+            </classes>
 
 
     </test>
@@ -14,7 +16,9 @@
     <test name="firefox ile calisacak testler">
         <parameter name="secilenCrossBrowser" value="firefox"></parameter>
 
-
+        <classes>
+            <class name="tests.day12_crossBrowserTestler.C01_CrossBrowserAramaTesti"></class>
+        </classes>
 
 
     </test>
