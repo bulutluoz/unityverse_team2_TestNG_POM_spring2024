@@ -7,6 +7,7 @@
 
             <classes>
                 <class name="tests.day12_crossBrowserTestler.C01_CrossBrowserAramaTesti"></class>
+                <class name="tests.day12_crossBrowserTestler.C02_CrossBrowserPozitifLoginTesti"></class>
             </classes>
 
 
@@ -18,6 +19,7 @@
 
         <classes>
             <class name="tests.day12_crossBrowserTestler.C01_CrossBrowserAramaTesti"></class>
+            <class name="tests.day12_crossBrowserTestler.C02_CrossBrowserPozitifLoginTesti"></class>
         </classes>
 
 
